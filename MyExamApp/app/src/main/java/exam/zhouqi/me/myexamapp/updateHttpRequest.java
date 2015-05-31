@@ -20,11 +20,10 @@ import javax.xml.parsers.SAXParserFactory;
  * Created by Tony on 2015/5/31.
  */
 public class updateHttpRequest {
-    private String version;
-    private String apkUrl;
 
     public updateHttpRequest() {
         MyHttpClientResquest();
+
     }
 
     public void MyHttpClientResquest() {

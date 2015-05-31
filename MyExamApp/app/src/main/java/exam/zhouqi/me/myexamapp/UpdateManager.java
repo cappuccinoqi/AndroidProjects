@@ -5,14 +5,12 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -74,18 +72,19 @@ public class UpdateManager {
     }
 
     public void checkUpdateInfo() {
-        try {
-            oldVerCode = mContext.getPackageManager().getPackageInfo("exam.zhouqi.me.myexamapp", 0).versionCode;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        int versionCode = contentHandler.getVersionCode();
-        if (oldVerCode < versionCode) {
-            showNoticeDialog();
-        } else {
-            Toast.makeText(mContext, "NO Update found", Toast.LENGTH_LONG).show();
-        }
+//        try {
+//            oldVerCode= mContext.getPackageManager().getPackageInfo("exam.zhouqi.me.myexamapp",0).versionCode;
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//
+//        int versionCode = contentHandler.getVersionCode();
+//        if(oldVerCode < versionCode){
+//            showNoticeDialog();
+//        }else {
+//            Toast.makeText(mContext, "NO Update found", Toast.LENGTH_LONG).show();
+//        }
+        showNoticeDialog();
 
     }
 

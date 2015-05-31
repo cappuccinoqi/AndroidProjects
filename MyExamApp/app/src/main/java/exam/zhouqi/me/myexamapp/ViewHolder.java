@@ -30,7 +30,6 @@ public class ViewHolder {
             return holder;
         }
     }
-
     public View getmConvertView() {
         return mConvertView;
     }
